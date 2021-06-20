@@ -1,0 +1,30 @@
+{
+  "name": "chop_method",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irsol/yara_coding_challenge.git"
+  },
+  "author": "Soltyska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irsol/yara_coding_challenge/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/irsol/yara_coding_challenge#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.5",
+    "jest": "^27.0.4"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
