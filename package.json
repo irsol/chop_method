@@ -1,7 +1,7 @@
 {
   "name": "chop_method",
   "version": "1.0.0",
-  "description": "",
+  "description": "chop method written with JS",
   "main": "index.js",
   "scripts": {
     "test": "jest",
