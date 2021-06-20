@@ -6,7 +6,7 @@ export const chop = (template, data) => {
 
         for (const [key, value] of Object.entries(data)) {
 
-            if ((typeof key === 'string' || typeof key === 'number') && (typeof value === 'string' || typeof value === 'number')) {
+            if (isValidType(key) && isValidType(value)) {
 
                 chopped = chopped.replaceAll(`{{${key}}}`, value)
             }
@@ -20,4 +20,8 @@ export const chop = (template, data) => {
         console.log('Template must be a string and data must be an object type!')
     }
     return chopped
+}
+
+function isValidType(value) {
+    return typeof value === 'string' || typeof value === 'number'
 }
