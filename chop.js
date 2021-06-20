@@ -2,15 +2,22 @@ export const chop = (template, data) => {
 
     let chopped = template
 
-    for (const [key, value] of Object.entries(data)) {
+    if (typeof data === 'object' && typeof template === 'string') {
 
-        if ((typeof key === 'string' || typeof key === 'number') && (typeof value === 'string' || typeof value === 'number')) {
+        for (const [key, value] of Object.entries(data)) {
 
-            chopped = chopped.replaceAll(`{{${key}}}`, value)
+            if ((typeof key === 'string' || typeof key === 'number') && (typeof value === 'string' || typeof value === 'number')) {
+
+                chopped = chopped.replaceAll(`{{${key}}}`, value)
+            }
+            else {
+                const errorMessage = 'Dataset should only contains strings or numbers!'
+                console.log(errorMessage)
+            }
         }
-        else {
-            const errorMessage = "Dataset should only contains strings or numbers!"
-        }
+    }
+    else {
+        console.log('Template must be a string and data must be an object type!')
     }
     return chopped
 }
