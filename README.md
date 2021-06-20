@@ -10,3 +10,12 @@ If value is not a number or a string it will be ignored but it will show an erro
 
 If template will be not a string and data not an object it will show an error message in the console.
 
+## Usage
+
+1. Install all dependencies `npm install`
+2. Run unit tests `jest`
+3. Run app `npm start`
+
+## Technical challenges
+
+I use `node` for running app and `jest` for testing. `jest` uses commonJS while `node` uses ES6. I used babel preset to change jest to using ES6.
