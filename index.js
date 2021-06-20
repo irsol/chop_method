@@ -1,7 +1,7 @@
 import { chop } from "./chop.js";
 
 const testData = {
-    bread: "bread",
+    bread: "baguette",
     cheese: "brie cheese",
 };
 
