@@ -23,6 +23,17 @@ test('Fills duplicate templates', () => {
     expect(chop(myTemplate, dataTest)).toBe(expected)
 });
 
+test('Uses empty string in the template', () => {
+    const myTemplate = 'I like to eat {{bread}} and {{cheese}}';
+    const dataTest = {
+        bread: '',
+        cheese: 'brie cheese',
+    };
+
+    const expected = 'I like to eat  and brie cheese';
+    expect(chop(myTemplate, dataTest)).toBe(expected)
+});
+
 test('Uses numbers in the template', () => {
     const myTemplate = 'I like to eat {{1}} and {{cheese}}';
     const dataTest = {
